@@ -1,20 +1,21 @@
-# Python program to find the factorial of a number provided by the user.
+class Player:
+    def play(self):
+        print("The player is playing cricket.")
 
-# change the value for a different result
-num = 7
+# Define the derived class Batsman
+class Batsman(Player):
+    def play(self):
+        print("The batsman is batting.")
 
-# To take input from the user
-#num = int(input("Enter a number: "))
+# Define the derived class Bowler
+class Bowler(Player):
+    def play(self):
+        print("The bowler is bowling.")
 
-factorial = 1
+# Create objects of Batsman and Bowler classes
+batsman = Batsman()
+bowler = Bowler()
 
-# check if the number is negative, positive or zero
-if num < 0:
-   print("Sorry, factorial does not exist for negative numbers")
-elif num == 0:
-   print("The factorial of 0 is 1")
-else:
-   for i in range(1,num + 1):
-       factorial = factorial*i
-   print("The factorial of",num,"is",factorial)
-
+# Call the play() method for each object
+batsman.play()
+bowler.play()
